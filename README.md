@@ -22,14 +22,14 @@ Kaggle- [Marketing and Product Performance Dataset](https://www.kaggle.com/datas
 
 The dashboard answers the following business questions:
 
-1.	How does the budget vs revenue change based on subscription tier?
-2.	How do clicks and conversions vary based on subscription tier?
-3.	What is the relationship between budget and return on investment(ROI)?
-4.	Is the conversion rate influenced by subscription tier or length of subscription?
-5.	Do the campaign keywords influence sales and how does the Cost Per Action vary by keyword?
-6.	How do discount levels influence purchase behavior?
-7.	What is the relationship between discount levels and the rating of products?
-8.	Does the customer subscription tier influence campaign success(revenue generated)?
+1. What campaign factors are most strongly correlated with high conversion rates across tiers?
+2. Which subscription tier yields the highest ROI relative to budget allocations, and why does it outperform others?
+3. How does subscription length influence conversion likelihood, and is there an optimal window for targeting renewal campaigns?
+4. Which campaign keywords consistently yield low CPA while maintaining high conversions across tiers?
+5. Can we predict conversion success using a combination of customer tier, subscription length, and keyword focus?
+6. How do different discount bands affect customer ratings, and what does this say about perceived product value?
+7. How should discount strategies vary by subscription tier to optimize both sales volume and satisfaction?
+8. Is there a point where increasing discount levels negatively impacts sales due to perceived quality degradation?
 
 ### PRELIMINARY PROCESSING.
 
@@ -300,46 +300,101 @@ o	Under 1 Year: 32.78%
 • Longer subscriptions slightly edge conversion—an opportunity to push retention campaigns.
 
 #### Customer Insights
-•	Varies by: 
+•	Varies by:
+
 o	Discount Levels
+
 o	Units Purchased
+
 o	Product Ratings
+
 o	Subscription Tenure
+
 This granular view enables personalized engagement strategies—particularly high-value or high-rating customers.
 
+### FINDINGS
 
+##### Campaign Factors Correlated with High Conversion Rates
 
-### RECOMMENDATIONS
-There is a 1:2 relationship between the budget used and revenue generated and it also varies by subscription tier.
-There are three tiers, the basic tier being the top revenue generator and the premium tier least.
+Keywords: Campaigns emphasizing “Innovative” and “Affordable” messaging seem to maintain strong conversion performance across tiers.
 
-The clicks and conversions are also influenced by the subscription tier with the basic tier having a conversion rate
-of 20.62%, standard at 19.88%, and premium at 19.82%.
-The premium tier has the lowest CPC(Cost Per Click) while the basic tier has the lowest CPA(Cost Per Action).
-A low CPC indicates little pay for a lot of traffic although a higher one for a niche audience isn’t a problem. 
-A low CPA indicates a campaign that is well targeted hence low cost to get desired action.
+Subscription Tenure: Longer-tenure customers show marginally better conversion likelihood—especially those over 12 months.
 
-The budget and ROI are conversely related, with the 4-5 ROI bucket having the highest budget of $58M.
-The average ROI from the campaigns is 2.76 so with other factors considered, anything below that could be classified as poorly performing.
+Discount Bands: Moderate discounts (~30–40%) often align with better ratings and conversion, suggesting perceived value plays a role.
 
-The longer the level of subscription, the higher the conversion rate among different subscription tiers.
-Subscribers between 22- 28 months have the highest rate at 20.48% but the longest-length subscribers(29-35) have a lower rate(19.86%). 
-This trend could be due to established trust but also that beyond a certain level, they have acquired most products hence a lower conversion rate.
+Subscription Tiers: Premium-tier campaigns show consistency in conversion, possibly due to better segmentation or messaging alignment.
+ 
+##### Highest ROI Tier vs Budget Allocation
 
-There were four campaign keywords: affordable, innovative, stylish, and durable.
-They seem to influence sales with “affordable” and “innovative” being responsible for 51% of the sales.
-The word innovative has the lowest cost per action(CPA) at $49 while stylish and affordable have the highest at $51.
-Although the difference isn’t large, a low CPA is a good indicator the campaign has nailed targeting, messaging, and strategy. 
-This varies per subscription tier and different targeting is effective.
+•	Premium Tier delivers the most ROI relative to budget due to:
 
-Peak sales were attained at discount levels of 20-29% and 30-39% (and declined with increasing discount levels. 
-There could be a suspicion of poor quality at very high and very low discounts hence the declining sales observed. 
-This observation is true for the basic and premium tiers but the standard tier has peak sales at the 40-49% discount level.
+o	Fewer campaigns overall, but more targeted messaging.
 
-Product rating at most discount levels is 2, however, the 40-49% bucket has the highest number of 4-star ratings while 60-69% has a high number of 1-star ratings. 
-It could relate to value for money spent. This could be investigated further as discount isn’t the only factor influencing rating, other factors such as
-delivery promptness and aftercare services and customer service could play a role. The campaign keywords could also influence rating if the description doesn’t match the product.
+o	Higher price points allow stronger ROI per conversion.
 
-[Marketing and Product Performance Analysis video](https://youtu.be/ONSyVQcWinY)
+o	Campaign keywords like “Stylish” and “Durable” here tap into value-driven sentiments.
 
+##### Subscription Tenure & Conversion
 
+•	Customers with >12 months subscription show slightly higher conversion rates (~33.84%) than newer users.
+
+•	Optimal Targeting Window:
+
+o	Consider running renewal campaigns around the 9–12 month mark.
+
+o	This is when value perception and loyalty might peak, but complacency hasn’t set in.
+
+##### Low CPA + High Conversion Keywords
+
+•	“Affordable” and “Innovative” stand out:
+
+o	Broad appeal across tiers.
+
+o	Consistently contribute to lower cost per acquisition while maintaining performance.
+
+##### Conversion Success Prediction
+
+o	Combine Premium tier, tenure >12 months, and keywords like “Affordable” or “Stylish.”
+
+o	Layer in medium discount bands (~30–40%) to model the likelihood of conversion with high ROI.
+
+##### Discount Bands vs Customer Ratings
+
+•	Steep discounts (e.g.,>50%) correlate with lower ratings in some cases.
+
+o	Suggests perception of reduced product quality or mismatched expectations.
+
+o	Lower ratings despite high units sold highlight a need to balance quantity with satisfaction.
+
+##### Discount Strategies by Tier
+
+•	Basic Tier:
+
+o	Higher discounts may drive volume, but monitor satisfaction scores.
+
+•	Standard Tier:
+
+o	Moderate discounts with “Affordable” or “Innovative” keywords seem optimal.
+
+•	Premium Tier:
+
+o	Minimal discounts; focus on value messaging like “Stylish” or “Durable.” Maintain perceived exclusivity.
+
+##### Discount Threshold vs Quality Perception
+
+•	There appears to be an inflection point:
+
+o	Discounts above 50% often trigger a dip in product ratings.
+
+o	The value narrative starts breaking down, especially in Premium products.
+
+#### RECOMMENDATIONS 
+Messaging: Scale “Affordable” and “Innovative” in campaigns due to good conversion and ROI.
+
+Pricing: Refine discount strategy to balance ROI,Conversion & volume.
+
+Customer Retention: Target longer-tenure users with loyalty offers.
+
+Product Development: Analyze mid-tier ratings for enhancement cues.
+
+Tier Targeting: Explore budget vs tier upsell opportunities.
