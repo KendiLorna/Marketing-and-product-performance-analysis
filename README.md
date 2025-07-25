@@ -1,19 +1,18 @@
 ## Marketing and Product Performance.
 ### OVERVIEW
 
-The project is on a dataset from 10000 rows of data from marketing campaigns.
-
-The dataset contains 17 columns:
+This project analyzes a dataset containing 10,000 rows from various marketing campaigns. 
+It includes 17 columns organized into the following categories:
 
 •	ID columns: Campaign ID, Customer ID, Product ID
 
-•	Campaign Performance: Budgets, clicks, conversions, ROI, and revenue generated.
+•	Campaign Performance: Budgets, Clicks, Conversions, ROI, and Revenue generated.
 
-•	Product Details: Units sold, discount levels, and bundle pricing.
+•	Product Details: Units sold, Discount levels, and Bundle pricing.
 
-•	Customer Insights: Subscription tiers, lengths, satisfaction ratings.
+•	Customer Insights: Subscription tiers, Subscription length, Satisfaction rating.
 
-•	Promotional Context: Flash sales, discount levels, and common keyword themes. 
+•	Promotional Context: Flash sales, Discount Levels, and Common Campaign Keywords. 
 
 ### DATA SOURCE
 
@@ -28,7 +27,7 @@ The dashboard answers the following business questions:
 3.	What is the relationship between budget and return on investment(ROI)?
 4.	Is the conversion rate influenced by subscription tier or length of subscription?
 5.	Do the campaign keywords influence sales and how does the Cost Per Action vary by keyword?
-6.	Do discount levels influence purchase behavior?
+6.	How do discount levels influence purchase behavior?
 7.	What is the relationship between discount levels and the rating of products?
 8.	Does the customer subscription tier influence campaign success(revenue generated)?
 
@@ -54,13 +53,11 @@ There are 4 distinct keywords for the campaigns: affordable, innovative, stylish
 
 #### PROCESS
 
-I loaded the CSV file into MySQL to do preliminary data checks for duplicates and ensure the data was clean.
+The data was then imported into Microsoft Power BI for visualization.
+I created dynamic visuals with calculated measures and grouping columns using DAX. 
+Unnecessary columns were hidden to streamline analysis.
 
-I did some summary statistics on the columns before loading the data into Microsoft Power BI to create visualizations.
-
-In Power BI, I calculated some measures and hid unnecessary columns for my analysis.
-
-The measures were created using DAX: 
+Key DAX Measures: 
 
 •	Total budget
 ````
@@ -95,72 +92,224 @@ Cost Per Action = [Total Budget]/[Total Conversions]
 ````
 Total Units Sold = SUM(marketing_and_product_performance[Units_Sold])
 ````
-•	Average ROI(return on Investment)
+•	ROI(return on Investment)
 ````
-Avg. ROI = AVERAGE(marketing_and_product_performance[ROI])
+ROI = DIVIDE(([Total Revenue]-[Total Budget]),[Total Budget])
 ````
 
 I calculated three columns using DAX, namely: Discount buckets, ROI buckets, and Subscription buckets.
 
-•	Discount buckets DAX :
+•	Discount Bands:
 ````
-Discount Buckets = 
-SWITCH(
-    TRUE(),
-    'marketing_and_product_performance'[Discount_Level]>= 10 && 'marketing_and_product_performance'[Discount_Level]< 20, "10-19%",
-    'marketing_and_product_performance'[Discount_Level]>= 20 && 'marketing_and_product_performance'[Discount_Level] < 30, "20-29%",
-    'marketing_and_product_performance'[Discount_Level]>= 30 && 'marketing_and_product_performance'[Discount_Level]< 40, "30-39%",
-    'marketing_and_product_performance'[Discount_Level]>= 40 && 'marketing_and_product_performance'[Discount_Level] < 50, "40-49%",
-    'marketing_and_product_performance'[Discount_Level]>= 50 && 'marketing_and_product_performance'[Discount_Level] < 60, "50-59%",
-    'marketing_and_product_performance'[Discount_Level]>= 60 && 'marketing_and_product_performance'[Discount_Level] < 70, "60-69%",
-    "Other"
-)
-
+Discount_Bands = 
+    IF(marketing_and_product_performance[Discount_Level] >=60,"60-70%",
+    IF(marketing_and_product_performance[Discount_Level] >=50,"50-59%",
+    IF(marketing_and_product_performance[Discount_Level] >=40,"40-49%",
+    IF(marketing_and_product_performance[Discount_Level] >=30,"30-39%",
+    IF(marketing_and_product_performance[Discount_Level] >=20,"20-29%",
+    IF(marketing_and_product_performance[Discount_Level] >=10,"10-19%",
+"0-9%"
+))))))
 ````
 
 •	ROI buckets DAX :
 ````
-ROI Buckets = 
-SWITCH(
-    TRUE(),
-    'marketing_and_product_performance'[ROI] >= 0 && 'marketing_and_product_performance'[ROI] <= 1, "0-1",
-    'marketing_and_product_performance'[ROI] > 1 && 'marketing_and_product_performance'[ROI] <= 2, "1-2",
-    'marketing_and_product_performance'[ROI] > 2 && 'marketing_and_product_performance'[ROI] <= 3, "2-3",
-    'marketing_and_product_performance'[ROI] > 3 && 'marketing_and_product_performance'[ROI] <= 4, "3-4",
-    'marketing_and_product_performance'[ROI] > 4 && 'marketing_and_product_performance'[ROI] <= 5, "4-5",
-    "Other"
-)
-
+ROI_Buckets = 
+IF(marketing_and_product_performance[ROI] >=4,"Very High ROI",
+IF(marketing_and_product_performance[ROI] >=3,"High ROI",
+IF(marketing_and_product_performance[ROI] >=2,"Moderate ROI",
+IF(marketing_and_product_performance[ROI] >=1,"Low ROI",
+"Very Low ROI"
+))))
 ````
 
 •	Subscription length buckets :
 ````
-Subscription Bucket = 
-SWITCH(
-    TRUE(),
-    'marketing_and_product_performance'[Subscription_Length]>= 1  && 'marketing_and_product_performance'[Subscription_Length]<= 7, "1-7",
-    'marketing_and_product_performance'[Subscription_Length]>= 8  && 'marketing_and_product_performance'[Subscription_Length]<= 14, "8-14",
-    'marketing_and_product_performance'[Subscription_Length]>= 15 && 'marketing_and_product_performance'[Subscription_Length]<= 21, "15-21",
-    'marketing_and_product_performance'[Subscription_Length]>= 22 && 'marketing_and_product_performance'[Subscription_Length]<= 28, "22-28",
-    'marketing_and_product_performance'[Subscription_Length]>= 29 && 'marketing_and_product_performance'[Subscription_Length]<= 35, "29-35",
-    "Other"
+Subscription_Buckets =
+    IF(marketing_and_product_performance[Subscription_Length] >=24,"Over 2 Years",
+        IF(marketing_and_product_performance[Subscription_Length] >=12,"Over 1 Year",
+            "Under 1 Year"
+            )
+        )
+````
+•	Visual conditional formatting :
+````
+CF Blue = 
+IF([Campaign_ID] =
+    MAXX(
+        ROWS,
+        [Campaign_ID]
+    ),
+    "#358084","#90CDD0"
 )
 ````
-
-I created visuals based on the business questions to represent the insights.
-
-The KPIs are on the top row of the dashboard and all visuals are dynamic.
-
-I included a slicer to filter the charts by subscription tier.
-
-The histogram at the bottom right contains a drill-down feature to view the rating at a granular level based on each discount bucket.
+I created three reports: Campaing Performance, Product Performance and Customer Analysis to present metrics in a clear and granular manner.
 
 ### DASHBOARD
 
 ![Marketing dashboard](https://github.com/user-attachments/assets/2920fe79-de20-48c0-ac4e-d0e5e70ad3a9)
 
-### FINDINGS
+### Campaign Performance
 
+#### Overview
+
+Revenue vs. Budget: Campaigns generated $500M in revenue from a $253M budget, showcasing a strong return with an ROI of 98.07%.
+
+Units Sold: Over 1.01 million units sold, signaling solid market demand across campaigns.
+
+#### Efficiency Metrics
+•	Cost per Conversion: Averaging at $50.63, providing a useful benchmark for future campaign planning.
+
+•	Conversion Rate: Holding steady at 20.10%, indicating effective targeting and message penetration.
+
+#### Keyword Performance Breakdown
+•	Campaign messaging is well-balanced:
+
+o	Innovative (25.35%) and Affordable (25.11%) slightly lead over Stylish (24.91%) and Durable (24.63%).
+
+o	This suggests keywords are evenly weighted, with no bias.
+
+#### Tier-Level Distribution
+•	Campaign volumes are comparable across tiers:
+
+o	Basic: 3.4K
+
+o	Standard: 3.3K
+
+o	Premium: 3.3K
+
+o	This uniform distribution supports fair performance comparison by tier.
+
+#### Subscription Duration Insights
+o	Conversion breakdown:
+
+o	Over 2 years: 1.7M
+
+o	Over 1 year: 1.7M
+
+o	Under 1 year: 1.5M
+
+o	Indicates long-term subscriptions are performing just as well as shorter terms.
+
+#### Campaign-Level Highlights
+o	Individual campaign performance varies widely:
+
+o	Some deliver higher revenue but lower conversion rates, e.g., CMP_7FVXZ with just 6.33%, while others like CMP_WXDTMN achieve 12.13%.
+
+o	Useful for refining budget allocation and performance strategy.
+
+### PRODUCT PERFORMANCE
+#### Overview
+•	Total Products: 10K with 1.01M units sold
+
+•	Average Rating: 3 stars—suggests room for enhancement in product quality or user experience
+
+•	Average Discount: 39%—aggressive promotional strategy with strong conversion outcomes
+#### Subscription Tier Breakdown
+•	Basic, Standard, and Premium tiers each sold ~330K units, reflecting an even distribution across tiers
+
+•	Indicates product appeal is consistent regardless of tier pricing—valuable for scalable messaging
+
+#### Subscription Period Trends
+•	Sales volume remains balanced across:
+
+o	Over 2 Years: 349K
+
+o	Over 1 Year: 342K
+
+o	Under 1 Year: 316K
+
+•	Reinforces the notion that long-term and short-term subscribers are equally responsive to product offers
+
+#### Keyword Performance (Campaign Messaging)
+•	Top-performing keywords:
+
+o	Affordable (258K units)
+
+o	Innovative (256K)
+
+o	Stylish (251K)
+
+o	Durable (242K)
+
+•	Insight: “Affordable” and “Innovative” messaging drives slightly better product movement—candidates for expanded copy or media emphasis
+
+#### Product Rating Distribution
+•	Fairly balanced across ratings 1–4 with no dominant peak
+
+o	Ratings 2 and 4 slightly edge out others
+
+•	Opportunity: Dig deeper into ratings feedback to elevate product design and user satisfaction
+
+#### ROI Bucket Analysis
+Takeaway: Moderate and low ROI products maintain higher conversion rates—suggests niche value even in lower-performance brackets
+
+#### Discount Strategy Insights
+•	Best-performing discount ranges: 
+
+o	41–50% and 31–40% drove the highest ROI (~279%)
+
+•	Lower discounts (11–20%) still sustained solid conversion (~20%)
+
+•	Suggests elasticity in price sensitivity—possible to optimize margins without tanking conversion.
+
+-----Dashboard----
+
+### CUSTOMER ANALYSIS
+#### Overview
+•	10K customers contributed to $500M in revenue from a $253M budget
+
+•	Conversion rate of 20.10% and Cost per conversion of $51 show strong campaign efficiency
+
+#### Subscription Tier Analysis
+•	Customer count evenly spread:
+
+o	Basic: 3.4K
+
+o	Standard: 3.3K
+
+o	Premium: 3.3K
+
+•	Conversion rates are tight: 
+
+o	Basic leads at 20.62%
+
+o	Standard at 19.88%
+
+o	Premium at 19.80%
+
+•	All tiers perform similarly, but the Basic tier has a slight advantage, which could guide micro-targeted messaging.
+
+#### Subscription Period Trends
+•	Customers by period:
+
+o	Over 2 Years: 3.46K
+
+o	Over 1 Year: 3.40K
+
+o	Under 1 Year: 3.14K
+
+•	Conversion rates: 
+
+o	Over 1 Year: 33.84%
+
+o	Over 2 Years: 33.38%
+
+o	Under 1 Year: 32.78%
+
+• Longer subscriptions slightly edge conversion—an opportunity to push retention campaigns.
+
+#### Customer Insights
+•	Varies by: 
+o	Discount Levels
+o	Units Purchased
+o	Product Ratings
+o	Subscription Tenure
+This granular view enables personalized engagement strategies—particularly high-value or high-rating customers.
+
+
+
+### RECOMMENDATIONS
 There is a 1:2 relationship between the budget used and revenue generated and it also varies by subscription tier.
 There are three tiers, the basic tier being the top revenue generator and the premium tier least.
 
