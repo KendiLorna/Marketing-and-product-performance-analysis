@@ -24,8 +24,7 @@ The dashboard answers the following business questions:
 
 1. What campaign factors are most strongly correlated with high conversion rates across tiers?
 2. Which subscription tier yields the highest ROI relative to budget allocations, and why does it outperform others?
-3. How does ROI relate to conversion rate?
-4. How does subscription length influence conversion rate?
+3. How does subscription length influence conversion rate?
 5. Which campaign keywords consistently maintain low CPA while maintaining high conversions across tiers?
 6. Can we predict conversion success using a combination of customer tier, subscription length,discount and keyword focus?
 7. How do different discount bands affect product ratings, and what does this say about perceived product value?
@@ -84,13 +83,9 @@ Conversion Rate = DIVIDE(marketing_and_product_performance[Total Conversions],ma
 ````
 Cost Per Click = [Total Budget]/[Total Clicks]
 ````
-•	Cost Per Conversion
+•	Cost Per Conversion/Cost Per Action
 ````
 Cost Per Conversion = [Total Budget]/[Total Conversions]
-````
-•	Cost Per Action
-````
-Cost Per Action = [Total Budget]/[Customer Count]
 ````
 •	Total units sold
 ````
@@ -151,7 +146,7 @@ I created three reports: Campaing Performance, Product Performance and Customer 
 
 ### CAMPAIGN PERFORMANCE REPORT
 
-<img width="1416" height="791" alt="Campaign Performance" src="https://github.com/user-attachments/assets/484bc2f2-9091-4a12-a8e1-be061a5781e8" />
+<img width="1414" height="792" alt="Campaign Performance" src="https://github.com/user-attachments/assets/c851bbd1-ae91-411e-8158-0d0e4e687cd3" />
 
 ### Campaign Performance
 
@@ -162,16 +157,16 @@ Revenue vs. Budget: Campaigns generated $500M in revenue from a $253M budget, sh
 Units Sold: Over 1.01 million units sold, signaling solid market demand across campaigns.
 
 #### Efficiency Metrics
-•	Cost per Conversion: Averaging at $51, providing a useful benchmark for future campaign planning.
+•	Cost per Conversion: Averaging at $51, provides a useful benchmark for future campaign planning.
 
-•	Conversion Rate: Holding steady at 20%, indicating effective targeting and message penetration.
+•	Conversion Rate: At 20%, indicating effective targeting and message penetration.
 
 #### Keyword Performance Breakdown
 •	Campaign messaging is well-balanced:
 
-o	Innovative (25.4%) and Affordable (25.1%) slightly lead over Stylish (24.9%) and Durable (24.6%).
+o	Innovative (25.5%) and Affordable (25.2%) slightly lead over Stylish (24.9%) and Durable (24.5%).
 
-o	This suggests keywords are evenly weighted, with no bias.
+o	This suggests keywords are evenly weighted in their performance.
 
 #### Tier-Level Distribution
 •	Campaign volumes are comparable across tiers:
@@ -193,7 +188,7 @@ o	Over 1 year: 1.7M
 
 o	Under 1 year: 1.5M
 
-o	Indicates long-term subscriptions are performing just as well as shorter terms.
+o	Indicates long-term subscriptions are performing just slightly better than shorter terms.
 
 #### Campaign-Level Highlights
 o	Individual campaign performance varies widely:
@@ -255,7 +250,6 @@ Moderate and low and very low ROI products maintain higher conversion rates—th
 Finding a balance between ROI and conversion is important for campaign budgets.
 
 #### Discount Strategy Insights
-•	Best-performing discount ranges: 
 
 o	40–49% and 30–39% drove the highest ROI (~279%)
 
@@ -396,9 +390,9 @@ o	Minimal discounts with focus on value messaging like “Stylish” or “Durab
 #### RECOMMENDATIONS 
 Messaging: Utilize “Affordable” and “Innovative” in campaigns due to good conversion and ROI.
 
-Pricing: Refine discount strategy to balance ROI,Conversion & volume.
+Pricing: Refine discount strategy to balance ROI,Conversion & volume with optimal at 30-39%
 
-Customer Retention: Target longer-tenure users with loyalty offers.
+Customer Retention: Target longer-tenure users(> 1 year) with loyalty offers.
 
 Product Development: Analyze products often low-rated for product improvement.
 
