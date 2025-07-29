@@ -157,19 +157,19 @@ Revenue vs. Budget: Campaigns generated $500M in revenue from a $253M budget, sh
 Units Sold: Over 1.01 million units sold, signaling solid market demand across campaigns.
 
 #### Efficiency Metrics
-•	Cost per Conversion: Averaging at $51, provides a useful benchmark for future campaign planning.
+Cost per Conversion: Averaging at $51, provides a useful benchmark for future campaign planning.
 
-•	Conversion Rate: At 20%, indicating effective targeting and message penetration.
+Conversion Rate: At 20%, indicating effective targeting and message penetration.
 
 #### Keyword Performance Breakdown
-•	Campaign messaging is well-balanced:
+Campaign messaging is well-balanced:
 
 o	Innovative (25.5%) and Affordable (25.2%) slightly lead over Stylish (24.9%) and Durable (24.5%).
 
-o	This suggests keywords are evenly weighted in their performance.
+This suggests keywords are evenly weighted in their performance but affordable and innovative have an edge.
 
 #### Tier-Level Distribution
-•	Campaign volumes are comparable across tiers:
+Campaign volumes are comparable across tiers:
 
 o	Basic: 3.4K
 
@@ -177,10 +177,10 @@ o	Standard: 3.3K
 
 o	Premium: 3.3K
 
-o	This uniform distribution supports fair performance comparison by tier.
+This uniform distribution supports fair performance comparison by tier.
 
 #### Subscription Duration Insights
-o	Conversion breakdown:
+Conversion breakdown:
 
 o	Over 2 years: 1.7M
 
@@ -188,14 +188,14 @@ o	Over 1 year: 1.7M
 
 o	Under 1 year: 1.5M
 
-o	Indicates long-term subscriptions are performing just slightly better than shorter terms.
+Indicates long-term subscriptions are performing just slightly better than shorter terms.
 
 #### Campaign-Level Highlights
-o	Individual campaign performance varies widely:
+Individual campaign performance varies widely:
 
 o	Some deliver higher revenue but lower conversion rates, e.g., CMP_7FVXZ with just 6%, while others like CMP_WXDTMN achieve 12%.
 
-o	Useful for refining budget allocation and performance strategy.
+Useful for refining budget allocation and performance strategy.
 
 ### PRODUCT PERFORMANCE REPORT
 
@@ -203,18 +203,18 @@ o	Useful for refining budget allocation and performance strategy.
 
 ### PRODUCT PERFORMANCE
 #### Overview
-•	Total Products: 10K with 1.01M units sold
+Total Products: 10K with 1.01M units sold
 
-•	Average Rating: 3 stars—suggests room for enhancement in product quality or user experience
+Average Rating: 3 stars—suggests room for enhancement in product quality or user experience
 
-•	Average Discount: 39% with strong conversion outcomes
+Average Discount: 39% with strong conversion outcomes
 #### Subscription Tier Breakdown
 •	Basic, Standard, and Premium tiers each sold ~330K units, reflecting an even distribution across tiers
 
 •	Indicates product appeal is consistent regardless of tier pricing—valuable for focused messaging
 
 #### Subscription Period Trends
-•	Sales volume remains balanced across:
+Sales volume remains balanced across:
 
 o	Over 2 Years: 349K
 
@@ -222,10 +222,10 @@ o	Over 1 Year: 342K
 
 o	Under 1 Year: 316K
 
-•	Reinforces the notion that long-term and short-term subscribers are equally responsive to product offers but loyal subscribers buy more.
+Reinforces the notion that long-term and short-term subscribers are equally responsive to product offers but loyal subscribers buy more.
 
 #### Keyword Performance (Campaign Messaging)
-•	Top-performing keywords by units sold:
+Top-performing keywords by units sold:
 
 o	Affordable (258K)
 
@@ -235,14 +235,14 @@ o	Stylish (251K)
 
 o	Durable (242K)
 
-•	“Affordable” and “Innovative” messaging drives slightly better product movement—can be used for future campaigns.
+“Affordable” and “Innovative” messaging drives slightly better product movement—can be used for future campaigns.
 
 #### Product Rating Distribution
-•	Fairly balanced across ratings 1–4 with no dominant peak
+Fairly balanced across ratings 1–4 with no dominant peak
 
-o	Ratings 2 and 4 slightly edge out others
+o	Ratings 2 and 4 slightly edge out others indicating mixed satisfaction
 
-•	Further ratings analysis to elevate product design and user satisfaction
+Further ratings analysis to elevate product design and user satisfaction.
 
 #### ROI Bucket Analysis
 Very high and high ROI campaigns have the lowest conversion rate.
@@ -267,12 +267,12 @@ A good discount range that is optimal for both conversion and high ROI is 30-39%
 
 ### CUSTOMER ANALYSIS
 #### Overview
-•	10K customers contributed to $500M in revenue from a $253M budget
+•	10K customers contributed to $500M in revenue from a $253M budget.
 
-•	Conversion rate of 20% and Cost per conversion of $51 show strong campaign efficiency
+•	Conversion rate of 20% and Cost per conversion of $51 show strong campaign efficiency.
 
 #### Subscription Tier Analysis
-•	Customer count evenly spread:
+Customer count evenly spread:
 
 o	Basic: 3.4K
 
@@ -280,7 +280,7 @@ o	Standard: 3.3K
 
 o	Premium: 3.3K
 
-•	Conversion rates are tight: 
+Conversion rates are tight: 
 
 o	Basic leads at 21%
 
@@ -288,10 +288,10 @@ o	Standard at 20%
 
 o	Premium at 20%
 
-•	All tiers perform similarly, but the Basic tier has a slight advantage, which could be useful for targeted messaging.
+All tiers perform similarly, but the Basic tier has a slight advantage, which could be useful for targeted messaging.
 
 #### Subscription Period Trends
-•	Customers by period:
+Customers by period:
 
 o	Over 2 Years: 3.46K
 
@@ -299,7 +299,7 @@ o	Over 1 Year: 3.40K
 
 o	Under 1 Year: 3.14K
 
-•	Conversion rates: 
+Conversion rates: 
 
 o	Over 1 Year: 34%
 
@@ -307,7 +307,7 @@ o	Over 2 Years: 33%
 
 o	Under 1 Year: 33%
 
-• Longer subscriptions have a slightly edge conversion—wise which can opportunity for retention campaigns.
+Longer subscriptions have a slightly edge conversion—wise which can opportunity for retention campaigns.
 
 #### Customer Insights
 •	Varies by:
@@ -336,7 +336,7 @@ Subscription Tiers: Premium tier campaigns show consistency in conversion, due t
  
 ##### Highest ROI Tier vs Budget Allocation
 
-•	Premium Tier delivers the most ROI relative to budget due to:
+Premium Tier delivers the most ROI relative to budget due to:
 
 o	Fewer campaigns overall, but more targeted messaging.
 
@@ -346,13 +346,13 @@ o	Campaign keywords like “Stylish” and “Durable” align well with the seg
 
 ##### Subscription Tenure & Conversion
 
-•	Customers with  over 12 months subscription show slightly higher conversion rates (~33.84%) than newer users.
+Customers with  over 12 months subscription show slightly higher conversion rates (~33.84%) than newer users.
 
 o	Consider running campaigns to reward loyalty.
 
 ##### Low CPA + High Conversion Keywords
 
-•	“Affordable” and “Innovative” stand out across all tiers.
+“Affordable” and “Innovative” stand out across all tiers.
 
 o	They contribute to lower cost per acquisition while maintaining performance.
 
@@ -363,7 +363,7 @@ discounts ranging from 30–39% for the likelihood of conversion with high ROI.
 
 ##### Discount Bands vs Customer Ratings
 
-•	Steep discounts (>50%) correlate with lower conversion in some cases.
+Steep discounts (>50%) correlate with lower conversion in some cases.
 
 o	Suggests perception of reduced product quality or mismatched expectations.
 
@@ -371,15 +371,15 @@ o	Lower ratings despite high units sold highlight a need to improve product sati
 
 ##### Discount Strategies by Tier
 
-•	Basic Tier:
+Basic Tier:
 
 o	Higher discounts may drive volume, but satisfaction scores should be monitored.
 
-•	Standard Tier:
+Standard Tier:
 
 o	Moderate discounts with “Affordable” or “Innovative” keywords seem optimal.
 
-•	Premium Tier:
+Premium Tier:
 
 o	Minimal discounts with focus on value messaging like “Stylish” or “Durable” maintain perceived exclusivity.
 
@@ -390,7 +390,7 @@ o	Minimal discounts with focus on value messaging like “Stylish” or “Durab
 #### RECOMMENDATIONS 
 Messaging: Utilize “Affordable” and “Innovative” in campaigns due to good conversion and ROI.
 
-Pricing: Refine discount strategy to balance ROI,Conversion & volume with optimal at 30-39%
+Pricing: Refine discount strategy to balance ROI, Conversion rate & volume with an optimal at 30-39%.
 
 Customer Retention: Target longer-tenure users(> 1 year) with loyalty offers.
 
