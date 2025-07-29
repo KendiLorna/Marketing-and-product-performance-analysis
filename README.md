@@ -1,7 +1,7 @@
 ### Marketing and Product Performance.
 #### OVERVIEW
 
-This project analyzes a dataset containing 10,000 rows from various marketing campaigns. 
+For this project I analyzed a dataset containing 10,000 rows from various marketing campaigns. 
 It includes 17 columns organized into the following categories:
 
 •	ID columns: Campaign ID, Customer ID, Product ID
@@ -20,7 +20,7 @@ Kaggle- [Marketing and Product Performance Dataset](https://www.kaggle.com/datas
 
 #### QUESTIONS
 
-The dashboard answers the following business questions:
+My aim was to answer the following business questions:
 
 1. What campaign factors are most strongly correlated with high conversion rates across tiers?
 2. Which subscription tier yields the highest ROI relative to budget allocations, and why does it outperform others?
