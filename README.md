@@ -148,6 +148,8 @@ I created three reports: Campaing Performance, Product Performance and Customer 
 
 <img width="1414" height="792" alt="Campaign Performance" src="https://github.com/user-attachments/assets/c851bbd1-ae91-411e-8158-0d0e4e687cd3" />
 
+[Link to Dashboard Video](https://youtu.be/VjMOD83pldY)
+
 ### Campaign Performance
 
 #### Overview
