@@ -148,7 +148,9 @@ I created three reports: Campaing Performance, Product Performance and Customer 
 
 <img width="1414" height="792" alt="Campaign Performance" src="https://github.com/user-attachments/assets/c851bbd1-ae91-411e-8158-0d0e4e687cd3" />
 
-[Link to Dashboard Video](https://youtu.be/VjMOD83pldY)
+[View Dashboard Video](https://youtu.be/VjMOD83pldY)
+
+[View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNDBmMjRlZDctMThlYy00ZmNjLWEzMDgtNDVlY2UyNmJmZmNkIiwidCI6IjE5Mzc0NTc0LTFlMGEtNDJlZi1iMTBkLWRhNDRkODI0OGE4YiJ9)
 
 ### Campaign Performance
 
